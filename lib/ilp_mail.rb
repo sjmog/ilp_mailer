@@ -12,10 +12,13 @@ class IlpMail
   end
 
   def build
+    email = user.email
+    body = ilp.text
+
     @mail = gmail.compose do
-      to user.email
-      subject "Your Individual Learning Plan"
-      body ilp.text
+      to(email)
+      subject("Your Individual Learning Plan")
+      body(body)
     end
   end
 

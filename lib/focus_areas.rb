@@ -11,7 +11,7 @@ class FocusAreas
     @focus_area_factory = focus_area_factory
   end
 
-  def self.build(focus_area_list_path="./data/focus_areas.txt", focus_area_factory = IlpFactory)
+  def self.build(focus_area_list_path="./data/focus_areas.txt", focus_area_factory = FocusAreaFactory)
     focus_areas_file = File.open(focus_area_list_path, 'rb').read
     new(focus_areas_file, focus_area_factory).build
   end

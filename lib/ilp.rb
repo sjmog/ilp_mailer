@@ -37,6 +37,7 @@ class Ilp
   def body
     focus_areas.inject("") do |body, focus_area|
       body << "#{ focus_area.title }\n\n#{ focus_area.body }\n\n" if user.focus_areas.include? focus_area.title
+      body
     end
   end
 
