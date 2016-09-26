@@ -1,3 +1,3 @@
 require 'ostruct'
 
-User = OpenStruct.new
+User = OpenStruct

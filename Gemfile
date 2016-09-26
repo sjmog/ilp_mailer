@@ -3,3 +3,4 @@ source "https://rubygems.org"
 
 gem 'gmail'
 gem 'dotenv'
+gem 'shoulda-matchers', '~> 3.1'
