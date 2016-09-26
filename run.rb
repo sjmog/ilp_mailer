@@ -2,5 +2,8 @@ require 'gmail'
 require './config'
 
 Gmail.connect!(ENV["USERNAME"], ENV["PASSWORD"]) do |gmail|
-  p gmail.logged_in?
+  users = Users.build
+  ilps = Ilp.all
+
+  users.each { |user| user.mail(ilps) }
 end
