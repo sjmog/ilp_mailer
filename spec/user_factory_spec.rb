@@ -4,10 +4,6 @@ describe UserFactory do
   subject(:user_factory) { described_class.new(fixture_line, user_class) }
   let(:user_class) { double(:User) }
 
-  it 'knows the possible focus areas' do
-    expect(described_class::POSSIBLE_FOCUS_AREAS).not_to be_nil
-  end
-
   describe '.build_from_line' do
     it 'pulls user details (name, email address, focus areas) from a line copied from Google Sheets' do
       user_data = { 

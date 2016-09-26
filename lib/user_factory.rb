@@ -1,16 +1,6 @@
 require_relative './user'
 
 class UserFactory
-  POSSIBLE_FOCUS_AREAS = [
-    "Foundations of Programming",
-    "Test-Driven Development",
-    "Object-Oriented Programming",
-    "The Web",
-    "Databases",
-    "Computational Thinking",
-    "XP Values"
-  ]
-
   def initialize(line, user_class)
     @line = line
     @user_class = user_class
@@ -41,7 +31,7 @@ class UserFactory
   end
 
   def focus_areas
-    POSSIBLE_FOCUS_AREAS.inject([]) do |focus_areas, focus_area|
+    ::POSSIBLE_FOCUS_AREAS.inject([]) do |focus_areas, focus_area|
       focus_areas.tap { |areas| areas << focus_area if line.include? focus_area } 
     end
   end

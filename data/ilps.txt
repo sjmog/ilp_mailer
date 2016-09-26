@@ -1,11 +1,10 @@
-ILPs
-
 Foundations of Programming
 
 You need to focus on the basic structures of programming: state, behaviour, variables, functions. You’ll be ‘prepared’ once you are comfortable solving mildly complex challenges using the core libraries of a coding language. Pick one (I suggest Ruby or JavaScript), and practice with that. Then switch to the other and practice with that. That way, you’ll learn the abstract meanings behind the languages.
 
 1. Complete Codewars solutions up to and including 4kyu. When you submit a solution, investigate it. Understand why it works. Then re-submit your solution using that new method. It’s okay to repeat challenges.
 
+========
 
 Test-Driven Development
 
@@ -18,6 +17,7 @@ You need to focus on the basics of testing: setup and assertion (sometimes calle
 
 At each stage, you *must* repeat the exercises until they become effortless. Always follow a clear ‘test-first’ methodology and get used to moving in (absurdly small) steps. *Never skip forward, even if you know exactly what to do.*
 
+========
 
 Object-Oriented Programming
 
@@ -29,6 +29,7 @@ You need to focus on the basic principles of OO: classes, methods (the ‘behavi
 
 I *strongly advise* moving between 1) and 2) frequently. You *must* repeat your practice of them until the techniques become second nature.
 
+========
 
 The Web
 
@@ -38,6 +39,7 @@ You need to focus on the basic principles of ‘how the web works’. Start with
 2. Produce a thorough diagram of how the web works, including all these terms. Here is a template to get you started: http://www.filedropper.com/webtemplate (it is designed to be printed in A3).
 3. Implement Battleships or Rock Paper Scissors on the web, using a basic framework such as Sinatra.
 
+========
 
 Databases
 
@@ -46,6 +48,7 @@ You need to focus on the basic principles of persistence and storage. A simple w
 1. Implement data storage in Boris Bikes, or the Airport Challenge (https://github.com/makersacademy/course/tree/master/boris_bikes https://github.com/makersacademy/airport_challenge). Docking Stations/Airports should store bikes/planes once the program is turned off, and when you turn in on again. You can use an Object-Relational Map (ORM) such as DataMapper or Sequel to achieve this, and a Postgres database. Repeat this several times from scratch, so you are comfortable with the steps involved.
 2. Implement a ‘high score’ table in Rock Paper Scissors. This table should not lose data when the program is switched on and off. Repeat as above.
 
+========
 
 Computational Thinking
 
@@ -63,6 +66,7 @@ do_one_thing(Foo.new.do_another_thing)
 
 You can only get better at Computational Thinking with practice. It is *vital* that you repeat these 2, 3, and 4 *every day* until you feel fluent at them. Repeated practice for two weeks will ensure that any difficulties disappear.
 
+========
 
 XP Values
 
