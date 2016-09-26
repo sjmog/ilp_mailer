@@ -1,29 +1,23 @@
-require 'extract'
+require_relative './user_factory'
 
 class Users
-  def initialize(user_list, extract)
-    @user_list = user_list
-    @extract = extract
+  def initialize(responses, user_factory)
+    @responses = responses
+    @user_factory = user_factory
   end
 
-  def self.build(list_path="./data/list.txt", extract = Extract.new)
-    file = File.open(list_path, 'rb').read
-    new(file, extract).build
+  def self.build(list_path="./data/list.txt", user_factory = UserFactory)
+    responses = File.open(list_path, 'rb').read
+    new(responses, user_factory).build
   end
 
   def build
-    user_list
+    responses
       .each_line
-      .inject([]) do |users, line|
-        users << {
-          name: extract.name(line),
-          email: extract.email(line),
-          focus_areas: extract.focus_areas(line)
-        }
-      end
+      .inject([]) { |users, line| users << user_factory.build_from_line(line) }
   end
 
   private
 
-  attr_reader :user_list, :extract
+  attr_reader :responses, :user_factory
 end

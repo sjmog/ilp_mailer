@@ -1,27 +1,24 @@
-require 'extract'
+require 'user_factory'
 
-describe Extract do
-  subject(:extract) { described_class.new }
+describe UserFactory do
+  subject(:user_factory) { described_class.new(fixture_line, user_class) }
+  let(:user_class) { double(:User) }
 
   it 'knows the possible focus areas' do
     expect(described_class::POSSIBLE_FOCUS_AREAS).not_to be_nil
   end
 
-  describe '#name' do
-    it 'pulls the name from a line copied from Google Sheets' do
-      expect(extract.name(fixture_line)).to eq "Joe"
-    end
-  end
+  describe '.build_from_line' do
+    it 'pulls user details (name, email address, focus areas) from a line copied from Google Sheets' do
+      user_data = { 
+        name: "Joe", 
+        email: "joebloggs@gmail.com", 
+        focus_areas: ["Test-Driven Development", "Computational Thinking"] 
+      }
 
-  describe '#email' do
-    it 'pulls the email address from a line copied from Google Sheets' do
-      expect(extract.email(fixture_line)).to eq "joebloggs@gmail.com"
-    end
-  end
+      expect(user_class).to receive(:new).with(user_data)
 
-  describe '#focus_areas' do
-    it 'pulls the focus areas from a line copied from Google Sheets' do
-      expect(extract.focus_areas(fixture_line)).to eq ["Test-Driven Development", "Computational Thinking"]
+      user_factory.build
     end
   end
 
