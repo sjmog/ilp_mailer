@@ -25,7 +25,7 @@ class UserFactory
   def name
     line.scan(/\d\s{2}(\w+)/)[0][0]
   rescue
-    raise "Error parsing name from #{line}"
+    raise "Error parsing name from: #{line}"
   end
 
   def email
