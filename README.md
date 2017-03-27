@@ -46,3 +46,7 @@ The guidance is intended to:
 
 - Provide structure (that's why it's kind of 'bootcamp-y'): it should be a cure to the "it's 10am, I've just gotten up, I don't know how to start my day" feeling that can sap empowerment post-Makers. There are suggested times so jobhunters have targets to aim for, and feelings of achievement if they succeed.
 - Actually improve basic skills. At current it's composed of three tiered tasks that roll on from one another.
+
+### Example email
+
+![](images/example_email.png)
