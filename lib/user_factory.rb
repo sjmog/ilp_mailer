@@ -24,10 +24,14 @@ class UserFactory
 
   def name
     line.scan(/\d\s{2}(\w+)/)[0][0]
+  rescue
+    raise "Error parsing name from #{line}"
   end
 
   def email
     line.scan(/([a-zA-Z0-9_\-\.]+@[a-zA-Z0-9_\-\.]+\.[a-zA-Z]{2,5})/)[0][0]
+  rescue
+    raise "Error parsing email from: #{line}"
   end
 
   def focus_areas
